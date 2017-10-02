@@ -1,0 +1,40 @@
+\section*{4 - Graphical models}
+
+You can draw graphical models programmatically using the TikZ package. See \href{https://github.com/jluttine/tikz-bayesnet}{TikZ Bayesnet} for more information.
+
+\subsection*{(a)}
+
+A graphical model for a Linear Dinamical System is shown in Figure \ref{fig:lds}. You will see these in the Latent Chain Models lecture of the ML course.
+\begin{figure}[tbh!]
+\begin{center}
+\begin{tikzpicture}
+\node[node] (y1) at(0,0) {$y_1$};
+\node[node] (y2) at(2,0) {$y_2$};
+\node[node] (y3) at(4,0) {$y_3$};
+\node[node] (y4) at(6,0) {$y_4$};
+\node[nodec] (x1) at(0,-2) {$x_1$};
+\node[nodec] (x2) at(2,-2) {$x_2$};
+\node[nodec] (x3) at(4,-2) {$x_3$};
+\node[nodec] (x4) at(6,-2) {$x_4$};
+\node (yend) at(8,0) {. . .};
+\node (xend) at(8,-2) {. . .};
+\draw[->,d] (y1) -- (y2);
+\draw[->,d] (y2) -- (y3);
+\draw[->,d] (y3) -- (y4);
+\draw[->,d] (y1) -- (x1);
+\draw[->,d] (y2) -- (x2);
+\draw[->,d] (y3) -- (x3);
+\draw[->,d] (y4) -- (x4);
+\draw[->,d] (y4) -- (yend);
+%\draw[step=1cm,gray,very thin] (-1,-3) grid (7,1);
+\end{tikzpicture}
+\caption{Graphical model representation of a Linear Dynamical System}
+\label{fig:lds}
+\end{center}
+\end{figure}
+
+\subsection*{(b)}
+Tikz is actually very sophisticated and you can do a lot more with it than drawing DAGs. See \href{https://www.sharelatex.com/blog/2013/08/27/tikz-series-pt1.html}{Basic Drawing Using TikZ} for some examples.
+
+If you use \href{https://www.sharelatex.com/learn/Beamer}{Beamer} to create slides using LaTeX, Tikz can be a useful tool for labelling/highlighting parts of an equation, pointing arrows to locations on a figure, or creating illustrations for your presentation. In fact, both packages were written by the same authors!
+

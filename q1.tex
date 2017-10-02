@@ -1,0 +1,77 @@
+\section*{1 - Equations}
+
+\subsection*{(a)}
+
+The align environment from amsmath is helpful for long derivations. Use ampersand (\&) to set align position, and double backslash (\text{\textbackslash\textbackslash}) for newline.
+
+\begin{align*}
+    p(r \mid x) &= \left( 2 \pi \det{\Sigma} \right)^{-\frac{1}{2}} e^{-\frac{1}{2} (r - f(x))^T \Sigma^{-1}(r - f(x))} \\
+    \log p(r \mid x) &= 
+    -\frac{1}{2} \log{ \det{\Sigma}}  -\frac{1}{2}(r - f(x))^T \Sigma^{-1}(r - f(x)) + \text{const} \\
+    \pdv{}{x} \log p(r \mid x) &= -\frac{1}{2} \left[
+    f'(x)^T\Sigma^{-1}(r-f(x)) + (r-f(x)) ^T\Sigma^{-1}f'(x) 
+    \right] \\
+    &= f'(x)^T\Sigma^{-1}(r-f(x)) 
+\end{align*}
+
+See more examples of equation layout here:
+\href{https://www.sharelatex.com/project/59abf0c008b5663038fdbb07}{Amsmath examples from sharelatex}
+
+
+\subsection*{(b)}
+Some more random sample equations of the form you might encounter in the Machine Learning course. 
+
+\begin{equation*}
+    P(\bm{a}, \bm{b}, \bm{c}, \bm{d} \mid \alpha, \beta) =
+     \left (
+    \prod_{n=1}^N P(a_n \mid \beta)
+     \right )
+     \left (
+    \prod_{i=1}^D P(b_i \mid \alpha)
+    P(d_{ni} \mid c_{ni}, \alpha)
+    P(c_{ni} \mid \theta_d)
+     \right )
+\end{equation*}
+
+\begin{align}
+    \eta &= \left[
+    E_i(X_i), E_{k_l}(X_i, X_j)] \; \forall \; i, j, k, l
+    \right ]
+    \\
+    T(\mathcal{X}) &= 
+    \left [
+    \delta(X_i = k), \delta(X_i = k, X_j = l) \; \forall \; i, j, k, l
+    \right ]
+\end{align}
+
+\begin{equation}
+\tilde{w} = 
+\begin{bmatrix}
+    1.5 \\
+    -3.0 \\        
+\end{bmatrix}
+,\ 
+\Sigma_w = 
+\begin{bmatrix}
+    0.00  & -0.5 \\
+   -0.5 &  125 \\
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+    P(\mathcal{Y} \mid \mathcal{X}, \sigma^2, \mu_w, C_w) = ...
+\end{equation}
+
+\begin{align}
+\langle s_k \rangle _{q_\neq k} &= \alpha; \\
+\langle s_{i \neg k} \rangle _{q_\neg k} &= \beta
+\end{align}
+
+Alternative notation for expectations, also showing only one equation labelled within an align environment (see common.tex) 
+\begin{align*}
+\mathbbm{E} \left[ s_k \right] _{q_\neq k} &= \alpha; \\
+\mathbbm{E} \left[ s_{i \neg k} \right] _{q_\neq k} &= \beta \numberthis
+\end{align*} 
+
+
+An inline equation defining a distribution is $\Lambda_{:,i} \sim \mathcal{N}(0, \alpha_i^{-1}I)$.

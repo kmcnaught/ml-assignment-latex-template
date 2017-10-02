@@ -1,0 +1,35 @@
+\documentclass{article}
+
+\input{commonpackages.tex}
+
+% tell latex to look in 'figures' dir for images
+\graphicspath{{./figures/}}
+
+\setlength{\droptitle}{-1cm}
+\title{ML Sample Assignment}
+
+\author{Author Name}
+\date{Date}
+
+\begin{document}
+
+\maketitle
+
+% Some shared macros, setup, etc
+\input{common.tex}
+\input{tikzdefs.tex}
+
+% Each question is in a different source file
+% In this sample document, each question just provides some example latex for common things
+\input{q1.tex}
+\pagebreak[4] 
+
+\input{q2.tex}
+\pagebreak[4]  % really strong hint for new page 
+\input{q3.tex}
+\pagebreak[4]
+
+\input{q4.tex}
+\pagebreak[4]
+
+\end{document}

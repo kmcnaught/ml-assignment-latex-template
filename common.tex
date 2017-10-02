@@ -1,0 +1,27 @@
+% Useful macros to turn on when you find yourself
+% writing algebra with regular tildes or hats or
+% whatever.
+
+% \newcommand{\f} {
+%   \tilde{f}
+% }
+
+%% Expectations are commonly used
+% \newcommand{\E} {
+%   \mathbbm{E}
+% }
+
+%% Or expectations with left/right angle brackets
+% \newcommand{\la} {
+%   \left\langle
+% }
+% \newcommand{\ra} {
+%   \right\rangle
+% }
+
+% nicer determinant
+\renewcommand{\det}[1]{\begin{vmatrix}#1\end{vmatrix}}
+
+
+% Allow single line to be numbered in align* environment
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
